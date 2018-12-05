@@ -8,13 +8,13 @@ Players: <input id="caja1" type="number" min="1">
 <button id="myBtn" type="button" onclick="prizes()">Resultado</button>
   
 <script>
-
-function prizes(){
-	input.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function(event) {
     	event.preventDefault();
     		if (event.keyCode === 13) {
         	document.getElementById("myBtn").click();
     	}
+	
+function prizes(){
 	var x =document.getElementById('caja1');
 	players=x.value;
 	gen2=Math.round(players*0.3);
