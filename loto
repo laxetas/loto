@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Test</h2>
+
+Players: <input id="caja1" type="number" min="1">
+<button type="button" onclick="prizes()">Resultado</button>
+  
+<script>
+
+function prizes(){
+	var x =document.getElementById('caja1');
+	players=x.value;
+	gen2=Math.round(players*0.3);
+	gen1=Math.round(players*0.15);
+	third=Math.trunc(players*0.04);
+	second=Math.trunc(players*0.05);
+	subtotal=gen2+2*gen1+third+second;
+	first=Math.trunc(players*0.9-subtotal);
+	distributed=subtotal+first;
+	awarded=gen2+gen1+3;
+	document.getElementById("demo2").innerHTML = "players " + players;
+	document.getElementById("demo3").innerHTML ="1 player get a frist prize of "+ first;
+	document.getElementById("demo4").innerHTML ="1 player get a second prize of "+ second;
+	document.getElementById("demo5").innerHTML ="1 player get a third prize of "+ third;
+	document.getElementById("demo6").innerHTML =gen1 + " players get 2";
+	document.getElementById("demo7").innerHTML =gen2 + " players get 1";
+	document.getElementById("demo8").innerHTML = "Amount played " + players;
+	document.getElementById("demo9").innerHTML = "Players awarded " + awarded;
+	document.getElementById("demo10").innerHTML = "Amount distributed " + distributed;
+}
+
+
+</script>
+
+  
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+</body>
+</html>
