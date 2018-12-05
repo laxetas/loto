@@ -10,9 +10,11 @@ Players: <input id="caja1" type="number" min="1">
 <script>
 
 function prizes(){
-	if (event.keyCode === 13) {
-    	Trigger the button element with a click
-    	document.getElementById("myBtn").click();
+	input.addEventListener("keyup", function(event) {
+    	event.preventDefault();
+    		if (event.keyCode === 13) {
+        	document.getElementById("myBtn").click();
+    	}
 	var x =document.getElementById('caja1');
 	players=x.value;
 	gen2=Math.round(players*0.3);
