@@ -5,11 +5,14 @@
 <h2>JavaScript Test</h2>
 
 Players: <input id="caja1" type="number" min="1">
-<button type="button" onclick="prizes()">Resultado</button>
+<button id="myBtn" type="button" onclick="prizes()">Resultado</button>
   
 <script>
 
 function prizes(){
+	if (event.keyCode === 13) {
+    	Trigger the button element with a click
+    	document.getElementById("myBtn").click();
 	var x =document.getElementById('caja1');
 	players=x.value;
 	gen2=Math.round(players*0.3);
