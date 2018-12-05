@@ -8,6 +8,7 @@ Players: <input id="caja1" type="number" min="1">
 <button id="calcular" type="button" onclick="prizes()">Resultado</button>
   
 <script>
+
 document.getElementById("caja1")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -15,9 +16,11 @@ document.getElementById("caja1")
         document.getElementById("calcular").click();
     }
 });
-	
+
+
+
 function prizes(){
-	
+	var x =document.getElementById('caja1');
 	players=x.value;
 	gen2=Math.round(players*0.3);
 	gen1=Math.round(players*0.15);
